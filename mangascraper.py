@@ -121,7 +121,7 @@ def downloadMangaChapter(seriesName, chapter, path):
 
 
 def main(): 
-  path = os.getcwd() + "/" 
+  path = os.getcwd() + "/Manga/" 
 
   while True:
     clearScreen()
