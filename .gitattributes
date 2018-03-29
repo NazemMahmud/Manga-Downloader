@@ -1,0 +1,4 @@
+__pycache__/* linguist-vendored
+build/mangascraper/* linguist-vendored
+dist/mangascraper/* linguist-vendored
+mangascraper.spec linguist-vendored
