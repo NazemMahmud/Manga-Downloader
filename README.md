@@ -17,10 +17,22 @@ Console Version:
 ## How to Use:
 Run **mangascraper.exe** in the **dist** folder
 Downloaded manga is then stored in the /Manga directory.
+Follow prompt
 
 ## To Do:
 * Create a simple frontend GUI
 * Create a standalone linux executable
 * Handle dynamic page sizing and orientation problems (Some pages randomly switch to landscape instead of portrait)
 * Better input sanitization and confirmation of what series is being scraped
-* 
+* Better exception handling
+* Command to grab latest chapter of specified series
+* Command to grab all chapters of specified series
+* Command to get information about specified series
+* Command to view chapter titles and dates of specified series
+* Help command
+* Set Download Destination
+* Progress Bar
+* Change query command to the format of  <Series_Name> <Start_Range> <End_Range>
+* Change page download output to just change the number at the end instead of printing "Download Finished" X times.
+* Change PDF module to img2pdf instead of FPDF
+* Add option to zip into .cbz (zipfile module)
