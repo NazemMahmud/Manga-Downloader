@@ -136,7 +136,7 @@ def createPDF(seriesName, chapter, path):
     pdf.image(image)
   
   print("  Finished building PDF for", seriesName,"-Chapter", chapter, "with", len(imageList), "pages")
-  pdf.output(downloadPath + "/" + seriesName + "-" + addZeroes(str(chapter), 4), "F")
+  pdf.output(downloadPath + "/" + seriesName + "-" + addZeroes(str(chapter), 4) + ".pdf", "F")
 
 
 
