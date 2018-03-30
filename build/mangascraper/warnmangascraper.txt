@@ -1,7 +1,7 @@
 missing module named resource - imported by posix, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
 missing module named posix - imported by os, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
 missing module named _posixsubprocess - imported by subprocess, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
-missing module named org - imported by pickle, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
+missing module named 'org.python' - imported by pickle, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py, xml.sax
 missing module named readline - imported by cmd, code, pdb, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
 excluded module named _frozen_importlib - imported by importlib, importlib.abc, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
 missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
@@ -11,6 +11,7 @@ missing module named java - imported by platform, D:\Programming\Python-Manga-Sc
 missing module named 'java.lang' - imported by platform, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py, xml.sax._exceptions
 missing module named vms_lib - imported by platform, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
 missing module named termios - imported by tty, getpass, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
+missing module named urllib.urlopen - imported by urllib, fpdf.py3k
 missing module named urllib.getproxies_environment - imported by urllib, requests.compat
 missing module named urllib.proxy_bypass_environment - imported by urllib, requests.compat
 missing module named urllib.proxy_bypass - imported by urllib, requests.compat
@@ -21,10 +22,16 @@ missing module named urllib.quote_plus - imported by urllib, requests.compat
 missing module named urllib.unquote - imported by urllib, requests.compat
 missing module named urllib.quote - imported by urllib, requests.compat
 missing module named grp - imported by shutil, tarfile, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
-missing module named 'org.python' - imported by copy, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py, xml.sax
+missing module named org - imported by copy, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
 missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, netrc, getpass, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
 missing module named _dummy_threading - imported by dummy_threading, D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
-missing module named fpdf - imported by D:\Programming\Python-Manga-Scraper\Manga-Downloader\mangascraper.py
+missing module named HTMLParser - imported by fpdf.py3k
+missing module named Image - imported by fpdf.py3k
+missing module named PIL - imported by fpdf.py3k
+missing module named md5 - imported by fpdf.py3k
+missing module named cPickle - imported by fpdf.py3k
+missing module named cStringIO - imported by cPickle
+missing module named copy_reg - imported by cPickle, cStringIO
 missing module named backports - imported by urllib3.packages.ssl_match_hostname
 missing module named _abcoll - imported by urllib3.packages.ordered_dict
 missing module named dummy_thread - imported by urllib3.packages.ordered_dict
