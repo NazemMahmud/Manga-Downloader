@@ -24,7 +24,8 @@ import requests # HTTP Requests
 import shutil #Advanced file handling
 import os # Directory operations
 from sys import platform # check platform
-
+from fpdf import FPDF
+import glob
 
 
 #Constants
@@ -96,9 +97,9 @@ def clearScreen():
 
 
 def downloadMangaChapter(seriesName, chapter, path):
-  print ("Retrieving ", seriesName, "  Chapter ", chapter, " and saving to " + path)
-  currentPage = INITIAL_PAGE
   downloadPath = getDownloadPath(seriesName, chapter, path)
+  currentPage = INITIAL_PAGE
+  print ("  Retrieving", seriesName, "Chapter", chapter, "and saving to\n    " + downloadPath)
 
   # Loop through all pages of chapter until there are none left
   while True:
@@ -118,6 +119,25 @@ def downloadMangaChapter(seriesName, chapter, path):
     currentPage = currentPage + 1
 
 
+def createPDF(seriesName, chapter, path):
+  downloadPath = getDownloadPath(seriesName, chapter, path)
+  imageList = glob.glob(downloadPath + "/*.jpg")
+  
+  
+
+  pdf = FPDF('P', 'mm', (281.7, 413))
+  #pdf = FPDF('P', 'mm')
+  pdf.set_auto_page_break(False, 0.0)
+  pdf.set_margins(0.0, 0.0, 0.0)
+  pdf.set_display_mode('fullpage', 'single')
+
+  for image in sorted(imageList): 
+    pdf.add_page()
+    pdf.image(image)
+  
+  print("  Finished building PDF for", seriesName,"-Chapter", chapter, "with", len(imageList), "pages")
+  pdf.output(downloadPath + "/" + seriesName + "-" + addZeroes(str(chapter), 4), "F")
+
 
 
 def main(): 
@@ -127,19 +147,20 @@ def main():
     clearScreen()
     print("----------- Manga Downloader V1 -------------")
     print("\n  NOTE: Manga is currently only downloaded from mangareader.net") 
-    title = input("\n\tEnter Series Name: ") 
+    title = input("\n\tEnter Series Name: ").title()
     chapterStart = int(input("\tEnter Chapter Range Start : "))
     chapterEnd = int(input("\tEnter Chapter Range End : ")) 
 
-    print ("\tDownloading Chapters ", chapterStart, "-", chapterEnd, "\n")
+    print ("\tDownloading Chapters", chapterStart, "-", chapterEnd, "\n")
 
     for chapter in range(chapterStart, chapterEnd+1):
       downloadMangaChapter(title, chapter, path) 
-      print("Finished Downloading ", title, " Chapter ", chapter, " .\n")
+      print("  Finished Downloading",title, "Chapter", chapter)
+      createPDF(title, chapter, path)
 
-    print("\nFinished download request")
+    print("\n  Finished download request")
     
-    if not yesOrNo("Download more? "):
+    if not yesOrNo("  Download more? "):
       break 
 
 # Run main program loop
