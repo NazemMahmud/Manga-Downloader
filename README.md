@@ -1,6 +1,6 @@
 ## About
 This is an application I decided to make to learn more about web scraping with Python. Currently, this
-will only pull from [mangareader.net](https://www.mangareader.net/). The user can specify a range of chapters to download of a specified series. The downloaded images will be stored in a folder named Manga in the same folder that mangascraper.exe is in.
+will only pull from [mangareader.net](https://www.mangareader.net/). The user can specify a range of chapters to download of a specified series. The downloaded images and generated PDF will be stored in a folder named Manga in the same folder that mangascraper.exe is in.
 
 
 Console Version:
@@ -12,11 +12,15 @@ Console Version:
 * **PIP** ( $ sudo apt install python3-pip )
 * **BeautifulSoup4** ( $ pip install BeautifulSoup4 )
 * **Requests** ( $ pip install requests )
+* **FPDF** ( $ pip install FPDF )
 
 ## How to Use:
 Run **mangascraper.exe** in the **dist** folder
+Downloaded manga is then stored in the /Manga directory.
 
 ## To Do:
-* Option to convert all retrieved images to a single pdf or mobi file
 * Create a simple frontend GUI
 * Create a standalone linux executable
+* Handle dynamic page sizing and orientation problems (Some pages randomly switch to landscape instead of portrait)
+* Better input sanitization and confirmation of what series is being scraped
+* 
