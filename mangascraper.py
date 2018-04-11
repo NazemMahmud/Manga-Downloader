@@ -140,6 +140,9 @@ def createCBZ(seriesName, chapter, path):
   finally:
     print("  Created CBZ File for", seriesName,"Chapter",chapter,"with",len(imageList),"pages")
     zip.close()
+    for file in os.listdir(downloadPath):
+      if file.endswith(".jpg"):
+        os.remove(os.path.join(downloadPath, file))
 
 
 
