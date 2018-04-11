@@ -3,7 +3,7 @@ This is an application I decided to make to learn more about web scraping with P
 will only pull from [mangareader.net](https://www.mangareader.net/). The user can specify a range of chapters to download of a searched series. The downloaded images will be generated into a CBZ file. All CBZ files and images are stored in the /Manga directory of the executable.
 
 ## Download Link
-Hosted on MediaFire (5.78MB) [Link](http://www.mediafire.com/file/kpmvl6lwppc5po5/mangascraper.zip)
+Hosted on MediaFire (5.78MB) [Link](http://www.mediafire.com/file/4ofha1a4tbcyohn/mangascraper.zip)
 
 ## How to Use:
 * Run **mangascraper.exe** in the **dist** folder
