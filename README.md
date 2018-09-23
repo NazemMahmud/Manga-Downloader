@@ -1,3 +1,5 @@
+# Manga Downloader
+
 ## About
 This is an application I decided to make to learn more about web scraping with Python. Currently, this
 will only pull from [mangareader.net](https://www.mangareader.net/). The user can specify a range of chapters to download of a searched series. The downloaded images will be generated into a CBZ file. All CBZ files and images are stored in the /Manga directory of the executable.
